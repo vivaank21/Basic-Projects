@@ -105,6 +105,6 @@ For controls, storage keys, and implementation notes on each of these, see **[TO
 
 ## Known quirks
 
-- The hub's `<title>` and footer text still read "20 Tools" / "a bench of 20 small tools" even though the catalog and folder listing hold 35 entries — cosmetic leftover from before the suite grew.
+- The hub's `<title>` and footer text still read "20 Tools" / "a bench of 35 small tools" even though the catalog and folder listing hold 35 entries — cosmetic leftover from before the suite grew.
 - Everything is client-side only: clearing browser data (or using a different browser/device/incognito window) resets every tool's saved state, since it all lives in `localStorage` with no server-side sync.
 - A few tools depend on free public APIs with no authentication and no formal uptime guarantee (see API-DEPENDENCIES.md) — they degrade gracefully but won't work without a network connection.
