@@ -1,0 +1,15 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 560px; }
+.form-card{ padding: 28px; }
+.step-track{ display:flex; justify-content:space-between; margin-bottom: 24px; font-size:.78rem; color: var(--muted-2); }
+.step-dot.is-active{ color: var(--amber); font-weight:600; }
+.form-step label{ display:block; margin-bottom: 18px; font-size:.86rem; color: var(--muted); }
+.form-step input, .form-step select, .form-step textarea{ margin-top:6px; }
+.field-msg{ display:block; margin-top:6px; font-size:.76rem; color: var(--danger); min-height: 1em; }
+.field-msg.is-ok{ color: var(--teal); }
+.strength-meter{ height:5px; border-radius:4px; background: var(--panel-2); margin-top:8px; overflow:hidden; }
+.strength-meter span{ display:block; height:100%; width:0%; background: var(--danger); transition: width .2s ease, background .2s ease; }
+.form-nav{ display:flex; gap:10px; justify-content:flex-end; margin-top: 10px; }
+.review-preview{ padding: 18px; font-size:.9rem; }
+.review-preview p{ margin: 0 0 8px; color: var(--text); }
+.review-preview strong{ color: var(--muted-2); font-weight:500; }
+.autosave-note{ text-align:center; font-size:.75rem; color: var(--muted-2); margin-top: 16px; }

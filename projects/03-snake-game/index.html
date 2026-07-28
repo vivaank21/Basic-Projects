@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snake — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #03 · Game</span>
+      <h1>Snake</h1>
+      <p>Arrow keys or swipe to steer. Eat, grow, don't hit yourself.</p>
+    </header>
+
+    <div class="snake-wrap">
+      <div class="snake-hud">
+        <span>Score: <strong id="score">0</strong></span>
+        <span>Best: <strong id="best">0</strong></span>
+        <select id="skin">
+          <option value="teal">Teal skin</option>
+          <option value="amber">Amber skin</option>
+          <option value="stripe">Striped skin</option>
+        </select>
+        <button class="chip" id="sound-toggle">🔊 Sound</button>
+      </div>
+      <div class="glass canvas-wrap">
+        <canvas id="snake-canvas" width="400" height="400"></canvas>
+        <div class="snake-overlay" id="snake-overlay">
+          <p id="overlay-text">Press Space or tap to start</p>
+          <button class="btn btn-primary" id="overlay-btn">Start Game</button>
+        </div>
+      </div>
+      <div class="glass leaderboard">
+        <strong>High Scores</strong>
+        <ol id="leaderboard-list"></ol>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

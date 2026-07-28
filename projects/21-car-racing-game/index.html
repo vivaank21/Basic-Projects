@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Racing — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #21 · Game</span>
+      <h1>Car Racing</h1>
+      <p>Arrow keys or A/D to weave through traffic. Speed climbs the longer you survive.</p>
+    </header>
+
+    <div class="race-hud">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>Best: <strong id="best">0</strong></span>
+      <span>Speed: <strong id="speed-out">1.0x</strong></span>
+    </div>
+
+    <div class="glass canvas-wrap">
+      <canvas id="race-canvas" width="360" height="520"></canvas>
+      <div class="race-overlay" id="race-overlay">
+        <p id="overlay-text">Press Space or tap to start</p>
+        <button class="btn btn-primary" id="overlay-btn">Start Engine</button>
+      </div>
+    </div>
+    <p class="race-hint">Tip: tap left/right half of the track on mobile to steer.</p>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

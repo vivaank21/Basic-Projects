@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Trial — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #17 · Game</span>
+      <h1>Typing Trial</h1>
+      <p>Type the passage as fast and accurately as you can. Custom text supported.</p>
+    </header>
+
+    <div class="hud-row">
+      <span>WPM: <strong id="wpm">0</strong></span>
+      <span>Accuracy: <strong id="accuracy">100%</strong></span>
+      <span>Time: <strong id="time-left">30s</strong></span>
+      <select id="duration"><option value="15">15s</option><option value="30" selected>30s</option><option value="60">60s</option></select>
+      <button class="btn btn-ghost" id="custom-text-btn">Use my own text</button>
+    </div>
+
+    <div class="glass text-display" id="text-display"></div>
+    <textarea id="typing-input" class="hidden" rows="1"></textarea>
+    <textarea id="custom-input" class="hidden" rows="4" placeholder="Paste your own passage here, then press Enter"></textarea>
+
+    <div class="controls-row">
+      <button class="btn btn-primary" id="restart-btn">Restart</button>
+    </div>
+
+    <canvas id="wpm-graph" width="600" height="140"></canvas>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

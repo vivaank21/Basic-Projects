@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Deck — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #20 · Media</span>
+      <h1>Sound Deck</h1>
+      <p>A tiny audio deck with a live visualizer. Drop in your own track or play the demo tones.</p>
+    </header>
+
+    <div class="glass player-card">
+      <canvas id="visualizer" width="600" height="160"></canvas>
+      <div class="track-info">
+        <h3 id="track-title">No track loaded</h3>
+        <p id="track-sub">Add a track or press play for a demo tone</p>
+      </div>
+      <div class="seek-row">
+        <span id="time-current">0:00</span>
+        <input type="range" id="seek-bar" min="0" max="100" value="0">
+        <span id="time-total">0:00</span>
+      </div>
+      <div class="transport-row">
+        <button class="transport-btn" id="prev-btn">⏮</button>
+        <button class="transport-btn big" id="play-btn">▶</button>
+        <button class="transport-btn" id="next-btn">⏭</button>
+        <input type="range" id="volume-bar" min="0" max="100" value="70">
+        <input type="range" id="eq-bar" min="-20" max="20" value="0" title="Bass boost">
+        <label class="upload-label">＋ <input type="file" id="file-upload" accept="audio/*" class="hidden"></label>
+      </div>
+    </div>
+
+    <div class="glass playlist-card">
+      <strong>Playlist</strong>
+      <ul id="playlist"></ul>
+    </div>
+    <audio id="audio-el" crossorigin="anonymous"></audio>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

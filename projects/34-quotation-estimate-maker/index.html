@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quotation Maker — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass no-print" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center no-print">
+      <span class="eyebrow">Tool #34 · Business</span>
+      <h1>Quotation & Estimate Maker</h1>
+      <p>Send a clean estimate before the work starts — with a validity window and your terms.</p>
+    </header>
+
+    <div class="doc-layout">
+      <section class="glass form-pane no-print">
+        <label>Your business <input type="text" id="from-name" value="Vishu Dev Studio"></label>
+        <label>Prepared for <input type="text" id="to-name" value="Prospective Client"></label>
+        <div class="two-col">
+          <label>Quote # <input type="text" id="quote-no" readonly></label>
+          <label>Valid until <input type="date" id="valid-until"></label>
+        </div>
+
+        <h4>Estimated items</h4>
+        <div class="item-rows" id="item-rows"></div>
+        <button class="btn btn-ghost" id="add-item">+ Add item</button>
+
+        <label>Tax rate (%) <input type="number" id="tax-rate" value="18" min="0"></label>
+        <label>Terms <textarea id="terms" rows="3">50% advance to begin work. Final payment due on delivery. Prices valid until the date above.</textarea></label>
+
+        <button class="btn btn-primary" id="print-quote">🖨️ Print / Save PDF</button>
+      </section>
+
+      <section class="glass invoice-paper" id="quote-preview">
+        <div class="inv-top">
+          <div><h2>QUOTATION</h2><p id="p-quote-no"></p></div>
+          <div class="inv-dates"><p>Date: <span id="p-date"></span></p><p>Valid until: <span id="p-valid"></span></p></div>
+        </div>
+        <div class="inv-parties">
+          <div><strong>From</strong><p id="p-from-name"></p></div>
+          <div><strong>Prepared for</strong><p id="p-to-name"></p></div>
+        </div>
+        <table class="inv-table">
+          <thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead>
+          <tbody id="p-items"></tbody>
+        </table>
+        <div class="inv-totals">
+          <div><span>Subtotal</span><span id="p-subtotal">₹0</span></div>
+          <div><span>Tax</span><span id="p-tax">₹0</span></div>
+          <div class="grand"><span>Estimated total</span><span id="p-total">₹0</span></div>
+        </div>
+        <p class="inv-notes"><strong>Terms:</strong> <span id="p-terms"></span></p>
+      </section>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

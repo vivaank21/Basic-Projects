@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Box — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/loader.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #18 · Data</span>
+      <h1>Recipe Box</h1>
+      <p>Vegetarian &amp; vegan meals only. Search by name, bookmark favorites, and start a cook timer right from the card.</p>
+    </header>
+
+    <div class="search-row">
+      <input type="text" id="recipe-search" placeholder="Search a veg dish (e.g. paneer, pasta, salad)…">
+      <button class="btn btn-primary" id="recipe-search-btn">Search</button>
+    </div>
+    <div class="chip-row" id="recipe-filters">
+      <button class="chip is-active" data-f="all">All results</button>
+      <button class="chip" data-f="favorites">★ Favorites</button>
+    </div>
+
+    <div id="recipe-loading" class="center hidden" style="padding:40px 0;"><div class="loader-bit" style="margin:0 auto;"></div></div>
+    <div class="recipe-grid" id="recipe-grid"></div>
+    <p class="recipe-empty hidden" id="recipe-empty">No recipes found — try another search.</p>
+  </main>
+
+  <div class="recipe-modal hidden" id="recipe-modal">
+    <div class="glass recipe-modal-inner">
+      <button class="btn btn-ghost" id="modal-close">✕ Close</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

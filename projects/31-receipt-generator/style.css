@@ -1,0 +1,33 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 900px; }
+.doc-layout{ display:grid; grid-template-columns: 1fr 340px; gap:24px; align-items:start; }
+@media (max-width:820px){ .doc-layout{ grid-template-columns: 1fr; } }
+.form-pane{ padding:22px; }
+.form-pane label{ display:block; margin-bottom:14px; font-size:.85rem; color:var(--muted); }
+.item-rows{ display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
+.item-row{ display:grid; grid-template-columns: 2fr 1fr 1fr auto; gap:8px; }
+.item-row input{ font-size:.85rem; }
+.item-row button{ background:none; border:none; color:var(--muted-2); cursor:pointer; }
+.item-row button:hover{ color:var(--danger); }
+
+.receipt-paper{ background:#fff; color:#12151c; padding:26px 22px; font-family: var(--font-mono); font-size:.82rem; width:320px; margin:0 auto; border-radius: var(--r-sm); }
+.receipt-head{ text-align:center; margin-bottom:14px; border-bottom:1px dashed #999; padding-bottom:12px; }
+.receipt-head h2{ font-family: var(--font-mono); font-size:1.05rem; margin-bottom:.2em; color:#12151c; }
+.receipt-head p{ color:#555; margin:0 0 4px; font-size:.78rem; }
+.receipt-meta{ font-size:.72rem !important; }
+.receipt-table{ width:100%; border-collapse:collapse; margin-bottom:14px; }
+.receipt-table th, .receipt-table td{ text-align:left; padding:4px 2px; font-size:.78rem; }
+.receipt-table th:nth-child(2), .receipt-table td:nth-child(2),
+.receipt-table th:nth-child(3), .receipt-table td:nth-child(3),
+.receipt-table th:nth-child(4), .receipt-table td:nth-child(4){ text-align:right; }
+.receipt-totals{ border-top:1px dashed #999; padding-top:10px; }
+.receipt-totals div{ display:flex; justify-content:space-between; margin-bottom:4px; }
+.receipt-totals .grand{ font-weight:700; font-size:.95rem; border-top:1px dashed #999; padding-top:6px; margin-top:4px; }
+.receipt-footer{ text-align:center; margin-top:16px; color:#666; font-size:.75rem; }
+
+@media print{
+  .no-print{ display:none !important; }
+  body{ background:#fff; }
+  .doc-layout{ display:block; }
+  .receipt-paper{ box-shadow:none; margin:0; }
+  main.tool-shell{ padding:0; max-width:none; }
+}

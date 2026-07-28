@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST Billing — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass no-print" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center no-print">
+      <span class="eyebrow">Tool #33 · Business</span>
+      <h1>GST Billing System</h1>
+      <p>Indian GST invoice with HSN codes and automatic CGST/SGST or IGST split.</p>
+    </header>
+
+    <div class="doc-layout">
+      <section class="glass form-pane no-print">
+        <h4>Seller</h4>
+        <label>Business name <input type="text" id="seller-name" value="The Bench Traders"></label>
+        <label>GSTIN <input type="text" id="seller-gstin" value="24ABCDE1234F1Z5"></label>
+        <label>State <input type="text" id="seller-state" value="Gujarat"></label>
+        <h4>Buyer</h4>
+        <label>Business name <input type="text" id="buyer-name" value="Client Enterprises"></label>
+        <label>GSTIN <input type="text" id="buyer-gstin" value="27PQRSX5678G1Z2"></label>
+        <label>State <input type="text" id="buyer-state" value="Maharashtra"></label>
+
+        <label>Invoice # <input type="text" id="invoice-no" readonly></label>
+
+        <h4>Items</h4>
+        <div class="item-rows" id="item-rows"></div>
+        <button class="btn btn-ghost" id="add-item">+ Add item</button>
+
+        <label>GST rate (%)
+          <select id="gst-rate"><option>5</option><option selected>12</option><option>18</option><option>28</option></select>
+        </label>
+        <p class="gst-note" id="gst-note"></p>
+
+        <button class="btn btn-primary" id="print-invoice">🖨️ Print / Save PDF</button>
+      </section>
+
+      <section class="glass invoice-paper" id="invoice-preview">
+        <div class="inv-top">
+          <div><h2>TAX INVOICE</h2><p id="p-invoice-no"></p></div>
+          <p id="p-date"></p>
+        </div>
+        <div class="inv-parties">
+          <div><strong>Seller</strong><p id="p-seller-name"></p><p>GSTIN: <span id="p-seller-gstin"></span></p><p id="p-seller-state"></p></div>
+          <div><strong>Buyer</strong><p id="p-buyer-name"></p><p>GSTIN: <span id="p-buyer-gstin"></span></p><p id="p-buyer-state"></p></div>
+        </div>
+        <table class="inv-table">
+          <thead><tr><th>Item</th><th>HSN</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead>
+          <tbody id="p-items"></tbody>
+        </table>
+        <div class="inv-totals" id="tax-breakdown"></div>
+      </section>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

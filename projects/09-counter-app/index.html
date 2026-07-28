@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter Bank — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #09 · Productivity</span>
+      <h1>Counter Bank</h1>
+      <p>Keep several named counters going at once — habits, reps, tallies, anything you count.</p>
+    </header>
+
+    <div class="glass new-counter">
+      <input type="text" id="new-name" placeholder="Counter name (e.g. Push-ups)">
+      <input type="number" id="new-step" placeholder="Step" value="1" min="1">
+      <input type="number" id="new-target" placeholder="Target (optional)">
+      <button class="btn btn-primary" id="new-add">Add counter</button>
+    </div>
+
+    <div class="counter-grid" id="counter-grid"></div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

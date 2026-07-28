@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receipt Generator — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass no-print" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center no-print">
+      <span class="eyebrow">Tool #31 · Business</span>
+      <h1>Receipt Generator</h1>
+      <p>Fill in the sale, add items, and print or save as PDF straight from your browser.</p>
+    </header>
+
+    <div class="doc-layout">
+      <section class="glass form-pane no-print">
+        <label>Store name <input type="text" id="store-name" value="The Bench General Store"></label>
+        <label>Address / phone <input type="text" id="store-meta" value="Rajkot, Gujarat · +91 90000 00000"></label>
+        <label>Receipt #<input type="text" id="receipt-no" readonly></label>
+
+        <div class="item-rows" id="item-rows"></div>
+        <button class="btn btn-ghost" id="add-item">+ Add item</button>
+
+        <label>Tax rate (%) <input type="number" id="tax-rate" value="5" min="0"></label>
+        <label>Payment method
+          <select id="payment-method"><option>Cash</option><option>Card</option><option>UPI</option><option>Other</option></select>
+        </label>
+
+        <button class="btn btn-primary" id="print-receipt">🖨️ Print / Save PDF</button>
+      </section>
+
+      <section class="glass receipt-paper" id="receipt-preview">
+        <div class="receipt-head">
+          <h2 id="p-store-name">Store</h2>
+          <p id="p-store-meta">—</p>
+          <p class="receipt-meta"><span id="p-receipt-no"></span> · <span id="p-date"></span></p>
+        </div>
+        <table class="receipt-table">
+          <thead><tr><th>Item</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead>
+          <tbody id="p-items"></tbody>
+        </table>
+        <div class="receipt-totals">
+          <div><span>Subtotal</span><span id="p-subtotal">₹0</span></div>
+          <div><span>Tax</span><span id="p-tax">₹0</span></div>
+          <div class="grand"><span>Total</span><span id="p-total">₹0</span></div>
+        </div>
+        <p class="receipt-footer">Paid via <span id="p-payment">Cash</span> — Thank you for shopping with us!</p>
+      </section>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

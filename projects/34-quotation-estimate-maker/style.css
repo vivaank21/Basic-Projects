@@ -1,0 +1,39 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 1000px; }
+.doc-layout{ display:grid; grid-template-columns: 1fr 460px; gap:24px; align-items:start; }
+@media (max-width:900px){ .doc-layout{ grid-template-columns: 1fr; } }
+.form-pane{ padding:22px; }
+.form-pane h4{ font-size:.8rem; text-transform:uppercase; letter-spacing:.06em; color:var(--amber); margin: 18px 0 10px; }
+.form-pane h4:first-child{ margin-top:0; }
+.form-pane label{ display:block; margin-bottom:12px; font-size:.85rem; color:var(--muted); }
+.two-col{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+.item-rows{ display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
+.item-row{ display:grid; grid-template-columns: 2fr 1fr 1fr auto; gap:8px; }
+.item-row input{ font-size:.85rem; }
+.item-row button{ background:none; border:none; color:var(--muted-2); cursor:pointer; }
+.item-row button:hover{ color:var(--danger); }
+
+.invoice-paper{ background:#fff; color:#1c1f26; padding:34px; border-radius: var(--r-sm); font-size:.86rem; }
+.inv-top{ display:flex; justify-content:space-between; margin-bottom:22px; }
+.inv-top h2{ font-family:var(--font-display); color:#1c1f26; letter-spacing:.05em; }
+.inv-top p{ color:#666; margin:0; font-size:.8rem; }
+.inv-dates p{ text-align:right; }
+.inv-parties{ display:flex; justify-content:space-between; margin-bottom:22px; gap:20px; }
+.inv-parties strong{ display:block; font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:#999; margin-bottom:4px; }
+.inv-parties p{ margin:0; color:#333; }
+.inv-table{ width:100%; border-collapse:collapse; margin-bottom:18px; }
+.inv-table th{ text-align:left; border-bottom:2px solid #1c1f26; padding:6px 4px; font-size:.75rem; text-transform:uppercase; color:#666; }
+.inv-table td{ padding:8px 4px; border-bottom:1px solid #eee; }
+.inv-table th:nth-child(2), .inv-table td:nth-child(2),
+.inv-table th:nth-child(3), .inv-table td:nth-child(3),
+.inv-table th:nth-child(4), .inv-table td:nth-child(4){ text-align:right; }
+.inv-totals{ max-width:260px; margin-left:auto; }
+.inv-totals div{ display:flex; justify-content:space-between; padding:4px 0; color:#444; }
+.inv-totals .grand{ font-weight:700; font-size:1.05rem; color:#1c1f26; border-top:2px solid #1c1f26; padding-top:8px; margin-top:6px; }
+.inv-notes{ margin-top:24px; color:#777; font-size:.8rem; border-top:1px solid #eee; padding-top:14px; }
+
+@media print{
+  .no-print{ display:none !important; }
+  .doc-layout{ display:block; }
+  main.tool-shell{ padding:0; max-width:none; }
+  .invoice-paper{ box-shadow:none; }
+}

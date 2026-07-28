@@ -1,0 +1,24 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 780px; }
+.summary-grid{ display:grid; grid-template-columns: repeat(5,1fr); gap:10px; margin-bottom:20px; }
+@media (max-width:700px){ .summary-grid{ grid-template-columns: repeat(2,1fr); } }
+.summary-box{ padding:16px; text-align:center; }
+.s-label{ display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted-2); margin-bottom:6px; }
+.s-value{ font-family: var(--font-mono); font-size:1.15rem; font-weight:700; }
+.s-value.teal{ color: var(--teal); } .s-value.amber{ color: var(--amber); } .s-value.danger{ color: var(--danger); }
+.chart-card{ padding:18px 20px; margin-bottom:20px; }
+.chart-card strong{ display:block; margin-bottom:12px; font-size:.9rem; }
+#trend-canvas{ width:100%; height:auto; }
+.tab-row{ display:flex; gap:8px; margin-bottom:14px; }
+.chip{ padding:.5em 1.1em; border-radius:999px; border:1px solid var(--border-strong); background:transparent; color:var(--muted); font-size:.85rem; cursor:pointer; }
+.chip.is-active{ background: var(--panel-2); color:var(--text); }
+.panel{ padding:20px; }
+.entry-form{ display:grid; grid-template-columns: 2fr 1fr 1fr auto; gap:10px; margin-bottom:18px; }
+@media (max-width:600px){ .entry-form{ grid-template-columns: 1fr 1fr; } .entry-form button{ grid-column:1/-1; } }
+.entry-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.entry-item{ display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius: var(--r-sm); border:1px solid var(--border); background: var(--panel); }
+.entry-tag{ font-size:.68rem; padding:.25em .6em; border-radius:999px; background:var(--panel-2); color:var(--muted); }
+.entry-tag.paid{ color: var(--teal); } .entry-tag.pending{ color: var(--amber); } .entry-tag.overdue{ color: var(--danger); }
+.entry-name{ flex:1; }
+.entry-amount{ font-family: var(--font-mono); font-weight:600; }
+.entry-del{ background:none; border:none; color:var(--muted-2); cursor:pointer; }
+.entry-del:hover{ color: var(--danger); }

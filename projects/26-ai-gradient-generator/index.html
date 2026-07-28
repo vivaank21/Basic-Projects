@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gradient Generator — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #26 · Creative</span>
+      <h1>Gradient Generator</h1>
+      <p>Suggests color-theory-based palettes (complementary, analogous, triadic) as ready CSS gradients.</p>
+    </header>
+
+    <div class="glass preview-card" id="gradient-preview">
+      <span class="css-tag" id="css-output">background: linear-gradient(...)</span>
+    </div>
+
+    <div class="controls-grid">
+      <label>Style
+        <select id="scheme-select">
+          <option value="analogous">Analogous</option>
+          <option value="complementary">Complementary</option>
+          <option value="triadic">Triadic</option>
+          <option value="mono">Monochrome</option>
+        </select>
+      </label>
+      <label>Type
+        <select id="type-select">
+          <option value="linear">Linear</option>
+          <option value="radial">Radial</option>
+          <option value="conic">Conic</option>
+        </select>
+      </label>
+      <label>Angle <span id="angle-out">135</span>&deg;
+        <input type="range" id="angle-range" min="0" max="360" value="135">
+      </label>
+    </div>
+
+    <div class="controls-row">
+      <button class="btn btn-primary" id="generate-btn">✨ Generate new gradient</button>
+      <button class="btn btn-ghost" id="copy-css">Copy CSS</button>
+      <button class="btn btn-teal" id="save-gradient">Save</button>
+    </div>
+
+    <div class="glass saved-card">
+      <strong>Saved gradients</strong>
+      <div class="saved-grid" id="saved-grid"></div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

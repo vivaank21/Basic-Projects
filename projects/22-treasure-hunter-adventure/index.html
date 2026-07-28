@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treasure Hunter — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #22 · Game</span>
+      <h1>Treasure Hunter Adventure</h1>
+      <p>Arrow keys / WASD to explore. Collect every gem, dodge the traps, reach the exit.</p>
+    </header>
+
+    <div class="hunt-hud">
+      <span>Level: <strong id="level-out">1</strong></span>
+      <span>Gems: <strong id="gems-out">0/0</strong></span>
+      <span>Moves: <strong id="moves-out">0</strong></span>
+      <span>Health: <strong id="health-out">3</strong></span>
+    </div>
+
+    <div class="glass canvas-wrap">
+      <canvas id="hunt-canvas" width="400" height="400"></canvas>
+      <div class="hunt-overlay" id="hunt-overlay">
+        <p id="overlay-text">Descend into the ruins</p>
+        <button class="btn btn-primary" id="overlay-btn">Begin Adventure</button>
+      </div>
+    </div>
+    <p class="hunt-legend">💎 Gem &nbsp; 🕳️ Trap &nbsp; 🚪 Exit &nbsp; 🧭 You</p>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+/* ==========================================================================
+   THE BENCH — core design system
+   A digital toolbench: 20 small tools hung on a pegboard.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root{
+  /* -- palette -- */
+  --ink:        #12151c;
+  --ink-2:      #0c0e13;
+  --panel:      #1a1f2a;
+  --panel-2:    #212837;
+  --border:     rgba(232,230,225,0.09);
+  --border-strong: rgba(232,230,225,0.16);
+  --text:       #e8e6e1;
+  --muted:      #8b93a1;
+  --muted-2:    #5b6270;
+  --amber:      #f0a868;
+  --amber-dim:  #c98a54;
+  --teal:       #5ec8bd;
+  --teal-dim:   #3f9089;
+  --danger:     #e2685f;
+
+  /* -- type -- */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* -- radius / shadow -- */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --shadow-soft: 0 10px 40px -12px rgba(0,0,0,0.55);
+  --shadow-tight: 0 4px 16px -6px rgba(0,0,0,0.5);
+}
+
+:root[data-theme="light"]{
+  --ink:        #f3f1ec;
+  --ink-2:      #e8e5dd;
+  --panel:      #ffffff;
+  --panel-2:    #ffffff;
+  --border:     rgba(18,21,28,0.10);
+  --border-strong: rgba(18,21,28,0.18);
+  --text:       #1c1f26;
+  --muted:      #5a5f6b;
+  --muted-2:    #8b93a1;
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin:0;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4{
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0 0 .5em;
+  letter-spacing: -0.01em;
+}
+
+p{ margin: 0 0 1em; color: var(--muted); }
+
+a{ color: inherit; }
+
+code, .mono, .tag-number, .stat-value, input, select, textarea, button{
+  font-family: var(--font-mono);
+}
+
+::selection{ background: var(--amber); color: var(--ink); }
+
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: var(--ink-2); }
+::-webkit-scrollbar-thumb{ background: var(--panel-2); border-radius: 10px; border: 2px solid var(--ink-2); }
+::-webkit-scrollbar-thumb:hover{ background: var(--muted-2); }
+
+:focus-visible{
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* -- pegboard background: the signature texture -- */
+.pegboard{
+  background-image:
+    radial-gradient(circle, rgba(232,230,225,0.055) 1.3px, transparent 1.6px);
+  background-size: 28px 28px;
+  background-position: 14px 14px;
+}
+
+/* -- glass surface -- */
+.glass{
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-tight);
+}
+
+/* -- generic buttons -- */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: .7em 1.3em;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--panel-2);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: .92rem;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.btn:hover{ transform: translateY(-1px); border-color: var(--muted-2); }
+.btn:active{ transform: translateY(0); }
+.btn-primary{
+  background: linear-gradient(135deg, var(--amber), var(--amber-dim));
+  color: var(--ink-2);
+  border-color: transparent;
+}
+.btn-primary:hover{ filter: brightness(1.08); }
+.btn-teal{
+  background: linear-gradient(135deg, var(--teal), var(--teal-dim));
+  color: var(--ink-2);
+  border-color: transparent;
+}
+.btn-ghost{ background: transparent; }
+.btn-danger{ border-color: var(--danger); color: var(--danger); background: transparent; }
+.btn:disabled{ opacity: .45; cursor: not-allowed; transform: none; }
+
+/* -- inputs -- */
+input[type=text], input[type=number], input[type=email], input[type=password],
+input[type=search], input[type=date], select, textarea{
+  background: var(--ink-2);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  padding: .7em .9em;
+  border-radius: var(--r-sm);
+  font-size: .95rem;
+  width: 100%;
+}
+textarea{ font-family: var(--font-body); resize: vertical; }
+input::placeholder, textarea::placeholder{ color: var(--muted-2); }
+
+/* -- tool-tag shape used for hub cards (pegboard hang-tag) -- */
+.tool-tag{
+  position: relative;
+  clip-path: polygon(8% 0%, 100% 0%, 100% 92%, 92% 100%, 0% 100%, 0% 8%);
+}
+.tool-tag::before{
+  content:"";
+  position:absolute;
+  top: 14px; left: 14px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+  border: 1px solid var(--border-strong);
+  z-index: 2;
+}
+
+/* -- back-to-hub link used on every project page -- */
+.bench-nav{
+  position: fixed;
+  top: 18px; left: 18px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  padding: .5em 1em;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 999px;
+}
+.bench-nav:hover{ color: var(--amber); }
+.bench-nav svg{ width: 16px; height: 16px; }
+
+/* -- utility -- */
+.eyebrow{
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.container{ max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.center{ text-align: center; }
+.hidden{ display: none !important; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Board — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/loader.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+
+  <main class="container tool-shell">
+    <header class="tool-head">
+      <span class="eyebrow">Tool #01 · Productivity</span>
+      <h1>Task Board</h1>
+      <p>Categorized tasks with priority tags, search, filters, and drag-to-reorder. Saved automatically.</p>
+    </header>
+
+    <section class="glass composer">
+      <input type="text" id="task-title" placeholder="What needs doing?">
+      <select id="task-category">
+        <option>Work</option><option>Personal</option><option>Learning</option><option>Errands</option>
+      </select>
+      <select id="task-priority">
+        <option value="high">High priority</option>
+        <option value="medium" selected>Medium priority</option>
+        <option value="low">Low priority</option>
+      </select>
+      <button class="btn btn-primary" id="add-task">Add task</button>
+    </section>
+
+    <section class="controls-row">
+      <input type="text" id="task-search" placeholder="Search tasks…">
+      <div class="chip-row" id="category-filters">
+        <button class="chip is-active" data-cat="All">All</button>
+        <button class="chip" data-cat="Work">Work</button>
+        <button class="chip" data-cat="Personal">Personal</button>
+        <button class="chip" data-cat="Learning">Learning</button>
+        <button class="chip" data-cat="Errands">Errands</button>
+      </div>
+      <label class="chip-toggle"><input type="checkbox" id="hide-done"> Hide completed</label>
+    </section>
+
+    <ul class="task-list" id="task-list"></ul>
+    <p class="task-empty hidden" id="task-empty">Nothing here. Add your first task above.</p>
+
+    <footer class="tool-footer">
+      <span id="task-stats">0 tasks</span>
+      <button class="btn btn-ghost" id="clear-done">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

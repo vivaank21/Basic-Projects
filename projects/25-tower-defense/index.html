@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tower Defense — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #25 · Game</span>
+      <h1>Tower Defense</h1>
+      <p>Place towers off the path to stop the waves. Pick a tower, click an empty tile to build.</p>
+    </header>
+
+    <div class="td-hud">
+      <span>Gold: <strong id="gold-out">100</strong></span>
+      <span>Lives: <strong id="lives-out">10</strong></span>
+      <span>Wave: <strong id="wave-out">1</strong></span>
+      <button class="btn btn-primary" id="wave-btn">Send wave</button>
+    </div>
+
+    <div class="tower-picker" id="tower-picker">
+      <button class="tower-btn is-active" data-tower="basic">🗼 Basic — 25g</button>
+      <button class="tower-btn" data-tower="sniper">🎯 Sniper — 50g</button>
+      <button class="tower-btn" data-tower="splash">💥 Splash — 70g</button>
+    </div>
+
+    <div class="glass canvas-wrap">
+      <canvas id="td-canvas" width="440" height="440"></canvas>
+      <div class="td-overlay hidden" id="td-overlay">
+        <p id="overlay-text">Game over</p>
+        <button class="btn btn-primary" id="overlay-btn">Rebuild base</button>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

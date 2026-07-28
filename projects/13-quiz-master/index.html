@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Master — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #13 · Game</span>
+      <h1>Quiz Master</h1>
+      <p>Pick a category, beat the clock, and see how you rank against your past runs.</p>
+    </header>
+
+    <div class="glass category-select" id="category-select">
+      <h3>Choose a category</h3>
+      <div class="cat-grid">
+        <button data-cat="science">🔬 Science</button>
+        <button data-cat="history">🏛️ History</button>
+        <button data-cat="code">💻 Code</button>
+        <button data-cat="geo">🌍 Geography</button>
+      </div>
+    </div>
+
+    <div class="glass quiz-card hidden" id="quiz-card">
+      <div class="quiz-top">
+        <span id="quiz-progress">Q1 / 8</span>
+        <span id="quiz-timer">15s</span>
+      </div>
+      <div class="flip-card" id="flip-card">
+        <div class="flip-inner" id="flip-inner">
+          <div class="flip-front">
+            <h3 id="question-text">—</h3>
+            <div class="options-grid" id="options-grid"></div>
+          </div>
+          <div class="flip-back">
+            <p id="answer-reveal">—</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass results-card hidden" id="results-card">
+      <h2 id="results-score">You scored --</h2>
+      <p id="results-breakdown"></p>
+      <button class="btn btn-primary" id="results-retry">Try another category</button>
+    </div>
+
+    <div class="glass topscores-card">
+      <strong>Top scores</strong>
+      <ul id="topscores-list"></ul>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

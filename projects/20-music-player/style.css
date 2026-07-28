@@ -1,0 +1,18 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 640px; }
+.player-card{ padding: 24px; margin-bottom:20px; }
+#visualizer{ width:100%; height:140px; border-radius: var(--r-sm); background: var(--ink-2); margin-bottom:16px; }
+.track-info{ text-align:center; margin-bottom:14px; }
+.track-info p{ margin:0; font-size:.82rem; }
+.seek-row{ display:flex; align-items:center; gap:10px; font-size:.76rem; color:var(--muted-2); font-family: var(--font-mono); margin-bottom:16px; }
+.seek-row input{ flex:1; accent-color: var(--amber); }
+.transport-row{ display:flex; align-items:center; gap:10px; justify-content:center; flex-wrap:wrap; }
+.transport-btn{ width:44px; height:44px; border-radius:50%; border:1px solid var(--border-strong); background: var(--panel-2); color:var(--text); cursor:pointer; font-size:1.1rem; }
+.transport-btn.big{ width:56px; height:56px; background: linear-gradient(135deg, var(--amber), var(--amber-dim)); color: var(--ink-2); border:none; font-size:1.4rem; }
+#volume-bar, #eq-bar{ width:80px; accent-color: var(--teal); }
+.upload-label{ width:44px; height:44px; border-radius:50%; border:1px dashed var(--border-strong); display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--muted); }
+.playlist-card{ padding:18px 20px; }
+.playlist-card strong{ display:block; margin-bottom:10px; font-size:.9rem; }
+#playlist{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+#playlist li{ display:flex; justify-content:space-between; padding: 10px 12px; border-radius: var(--r-sm); cursor:pointer; font-size:.85rem; color:var(--muted); }
+#playlist li:hover{ background: var(--panel-2); }
+#playlist li.is-active{ background: var(--panel-2); color: var(--amber); }

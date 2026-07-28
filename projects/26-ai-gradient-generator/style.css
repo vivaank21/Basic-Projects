@@ -1,0 +1,12 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 640px; }
+.preview-card{ height:220px; border-radius: var(--r-lg); display:flex; align-items:flex-end; padding:16px; margin-bottom:18px; }
+.css-tag{ font-family: var(--font-mono); font-size:.78rem; background: rgba(12,14,19,0.55); color:#fff; padding:.5em .8em; border-radius:8px; word-break: break-all; }
+.controls-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:14px; margin-bottom:18px; }
+.controls-grid label{ font-size:.82rem; color:var(--muted); display:block; }
+.controls-grid span{ color:var(--text); font-family: var(--font-mono); }
+.controls-row{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:24px; }
+.saved-card{ padding:18px 20px; }
+.saved-card strong{ display:block; margin-bottom:12px; font-size:.9rem; }
+.saved-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(90px,1fr)); gap:10px; }
+.saved-swatch{ height:60px; border-radius:8px; cursor:pointer; border:2px solid transparent; }
+.saved-swatch:hover{ border-color: var(--amber); }

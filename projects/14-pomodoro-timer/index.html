@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Focus Timer — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #14 · Productivity</span>
+      <h1>Focus Timer</h1>
+      <p>Work, then break, then repeat. Streaks are tracked locally so you can see your consistency.</p>
+    </header>
+
+    <div class="glass timer-card">
+      <div class="mode-row">
+        <button class="chip is-active" data-mode="work">Focus</button>
+        <button class="chip" data-mode="short">Short break</button>
+        <button class="chip" data-mode="long">Long break</button>
+      </div>
+      <div class="ring-wrap">
+        <svg viewBox="0 0 200 200" class="ring">
+          <circle cx="100" cy="100" r="90" class="ring-track"/>
+          <circle cx="100" cy="100" r="90" class="ring-bar" id="ring-bar"/>
+        </svg>
+        <div class="ring-time" id="ring-time">25:00</div>
+      </div>
+      <div class="timer-controls">
+        <button class="btn btn-primary" id="timer-toggle">Start</button>
+        <button class="btn btn-ghost" id="timer-reset">Reset</button>
+      </div>
+      <label class="task-link">Working on <input type="text" id="linked-task" placeholder="optional task name"></label>
+    </div>
+
+    <div class="glass settings-card">
+      <label>Focus (min) <input type="number" id="set-work" value="25" min="1" max="90"></label>
+      <label>Short break (min) <input type="number" id="set-short" value="5" min="1" max="30"></label>
+      <label>Long break (min) <input type="number" id="set-long" value="15" min="1" max="60"></label>
+    </div>
+
+    <div class="glass streak-card">
+      <div><span class="stat-value" id="streak-count">0</span><span class="stat-label">Day streak</span></div>
+      <div><span class="stat-value" id="today-count">0</span><span class="stat-label">Sessions today</span></div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

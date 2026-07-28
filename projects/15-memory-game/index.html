@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Flip — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #15 · Game</span>
+      <h1>Memory Flip</h1>
+      <p>Match every pair using the fewest moves and the least time.</p>
+    </header>
+
+    <div class="mem-hud">
+      <select id="grid-size"><option value="4x3">Easy (4×3)</option><option value="4x4" selected>Medium (4×4)</option><option value="6x4">Hard (6×4)</option></select>
+      <span>Moves: <strong id="move-count">0</strong></span>
+      <span>Time: <strong id="time-count">00:00</strong></span>
+      <span id="star-rating">☆☆☆</span>
+      <button class="btn btn-primary" id="new-game">New Game</button>
+    </div>
+
+    <div class="mem-grid" id="mem-grid"></div>
+
+    <div class="glass win-banner hidden" id="win-banner">
+      <h2>Solved! 🎉</h2>
+      <p id="win-stats"></p>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

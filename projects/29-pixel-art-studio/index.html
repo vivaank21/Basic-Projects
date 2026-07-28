@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Art Studio — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #29 · Creative</span>
+      <h1>Pixel Art Studio</h1>
+      <p>Click or drag to paint, right-click to erase. Your canvas autosaves.</p>
+    </header>
+
+    <div class="studio-hud">
+      <select id="grid-size">
+        <option value="16">16×16</option>
+        <option value="24" selected>24×24</option>
+        <option value="32">32×32</option>
+      </select>
+      <button class="chip" id="tool-pencil" data-active="true">✏️ Pencil</button>
+      <button class="chip" id="tool-eraser">🧹 Eraser</button>
+      <button class="chip" id="tool-fill">🪣 Fill</button>
+      <button class="btn btn-ghost" id="clear-canvas">Clear</button>
+      <button class="btn btn-primary" id="download-art">Download PNG</button>
+    </div>
+
+    <div class="studio-layout">
+      <div class="glass palette-card">
+        <div class="palette-swatches" id="palette-swatches"></div>
+        <input type="color" id="custom-color" value="#f0a868">
+      </div>
+      <div class="glass canvas-card">
+        <canvas id="pixel-canvas" width="480" height="480"></canvas>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

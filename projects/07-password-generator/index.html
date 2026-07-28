@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Smith — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #07 · Utility</span>
+      <h1>Password Smith</h1>
+      <p>Generate strong passwords, rated by entropy, and keep a small local vault of labels (never the passwords themselves in plain history — only what you save).</p>
+    </header>
+
+    <div class="glass pw-card">
+      <div class="pw-output">
+        <span id="pw-display" class="mono">••••••••••••</span>
+        <button class="btn btn-ghost" id="pw-copy">Copy</button>
+      </div>
+      <div class="entropy-bar"><span id="entropy-fill"></span></div>
+      <p class="entropy-label" id="entropy-label">Entropy: —</p>
+
+      <label class="range-row">Length <span id="len-out">16</span>
+        <input type="range" id="pw-length" min="6" max="42" value="16">
+      </label>
+
+      <div class="toggle-grid">
+        <label><input type="checkbox" id="opt-upper" checked> Uppercase (A-Z)</label>
+        <label><input type="checkbox" id="opt-lower" checked> Lowercase (a-z)</label>
+        <label><input type="checkbox" id="opt-numbers" checked> Numbers (0-9)</label>
+        <label><input type="checkbox" id="opt-symbols" checked> Symbols (!@#...)</label>
+        <label><input type="checkbox" id="opt-ambiguous"> Exclude ambiguous (l1IO0)</label>
+      </div>
+
+      <button class="btn btn-primary" id="pw-generate">Generate new password</button>
+
+      <div class="vault-row">
+        <input type="text" id="vault-label" placeholder="Label to save this password under (e.g. GitHub)">
+        <button class="btn btn-teal" id="vault-save">Save to vault</button>
+      </div>
+    </div>
+
+    <div class="glass vault-card">
+      <strong>Vault</strong>
+      <ul id="vault-list"></ul>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

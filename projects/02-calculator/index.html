@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #02 · Utility</span>
+      <h1>Calculator</h1>
+      <p>Standard and scientific modes, full keyboard support, and a running history drawer.</p>
+    </header>
+
+    <div class="calc-wrap">
+      <div class="glass calc-display">
+        <div class="calc-mode-row">
+          <button class="chip is-active" id="mode-standard">Standard</button>
+          <button class="chip" id="mode-scientific">Scientific</button>
+          <button class="btn btn-ghost" id="history-toggle">History</button>
+        </div>
+        <div class="calc-expr" id="calc-expr">&nbsp;</div>
+        <div class="calc-result" id="calc-result">0</div>
+      </div>
+
+      <div class="calc-pad" id="calc-pad-standard">
+        <button class="calc-btn calc-op" data-key="clear">AC</button>
+        <button class="calc-btn calc-op" data-key="backspace">⌫</button>
+        <button class="calc-btn calc-op" data-key="%">%</button>
+        <button class="calc-btn calc-op" data-key="/">÷</button>
+
+        <button class="calc-btn" data-key="7">7</button>
+        <button class="calc-btn" data-key="8">8</button>
+        <button class="calc-btn" data-key="9">9</button>
+        <button class="calc-btn calc-op" data-key="*">×</button>
+
+        <button class="calc-btn" data-key="4">4</button>
+        <button class="calc-btn" data-key="5">5</button>
+        <button class="calc-btn" data-key="6">6</button>
+        <button class="calc-btn calc-op" data-key="-">−</button>
+
+        <button class="calc-btn" data-key="1">1</button>
+        <button class="calc-btn" data-key="2">2</button>
+        <button class="calc-btn" data-key="3">3</button>
+        <button class="calc-btn calc-op" data-key="+">+</button>
+
+        <button class="calc-btn calc-wide" data-key="0">0</button>
+        <button class="calc-btn" data-key=".">.</button>
+        <button class="calc-btn calc-equals" data-key="=">=</button>
+      </div>
+
+      <div class="calc-pad hidden" id="calc-pad-sci">
+        <button class="calc-btn calc-op" data-key="sin(">sin</button>
+        <button class="calc-btn calc-op" data-key="cos(">cos</button>
+        <button class="calc-btn calc-op" data-key="tan(">tan</button>
+        <button class="calc-btn calc-op" data-key="sqrt(">√</button>
+        <button class="calc-btn calc-op" data-key="^">x^y</button>
+        <button class="calc-btn calc-op" data-key="log(">log</button>
+        <button class="calc-btn calc-op" data-key="(">(</button>
+        <button class="calc-btn calc-op" data-key=")">)</button>
+        <button class="calc-btn calc-op" data-key="pi">π</button>
+        <button class="calc-btn calc-op" data-key="!">n!</button>
+      </div>
+
+      <aside class="glass history-drawer hidden" id="history-drawer">
+        <div class="history-head">
+          <strong>History</strong>
+          <button class="btn btn-ghost" id="history-clear">Clear</button>
+        </div>
+        <ul id="history-list"></ul>
+      </aside>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

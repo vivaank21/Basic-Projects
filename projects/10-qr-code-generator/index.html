@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Bench — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #10 · Utility</span>
+      <h1>QR Bench</h1>
+      <p>Type anything — a URL, a note, contact info — and get a scannable code you can style and download.</p>
+    </header>
+
+    <div class="qr-wrap">
+      <div class="glass qr-form">
+        <label>Content
+          <textarea id="qr-text" rows="3" placeholder="https://example.com">https://claude.ai</textarea>
+        </label>
+        <div class="qr-controls">
+          <label>Size <span id="size-out">240</span>px
+            <input type="range" id="qr-size" min="120" max="360" step="20" value="240">
+          </label>
+          <label>Foreground <input type="color" id="qr-fg" value="#12151c"></label>
+          <label>Background <input type="color" id="qr-bg" value="#e8e6e1"></label>
+        </div>
+        <div class="qr-buttons">
+          <button class="btn btn-primary" id="qr-download-png">Download PNG</button>
+          <button class="btn btn-ghost" id="qr-download-svg">Download SVG</button>
+        </div>
+      </div>
+      <div class="glass qr-preview">
+        <div id="qr-canvas-host"></div>
+      </div>
+    </div>
+
+    <div class="glass qr-history">
+      <strong>Recent</strong>
+      <ul id="qr-history-list"></ul>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

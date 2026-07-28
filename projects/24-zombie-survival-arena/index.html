@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zombie Survival Arena — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #24 · Game</span>
+      <h1>Zombie Survival Arena</h1>
+      <p>WASD to move, mouse to aim, click to shoot. Survive as many waves as you can.</p>
+    </header>
+
+    <div class="arena-hud">
+      <span>Wave: <strong id="wave-out">1</strong></span>
+      <span>Health: <strong id="health-out">100</strong></span>
+      <span>Kills: <strong id="kills-out">0</strong></span>
+      <span>Best wave: <strong id="best-out">1</strong></span>
+    </div>
+
+    <div class="glass canvas-wrap">
+      <canvas id="arena-canvas" width="440" height="440"></canvas>
+      <div class="arena-overlay" id="arena-overlay">
+        <p id="overlay-text">The horde is coming</p>
+        <button class="btn btn-primary" id="overlay-btn">Enter Arena</button>
+      </div>
+    </div>
+    <p class="arena-hint">Mobile: drag to move, tap a zombie to shoot toward it.</p>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Parallax utilities — layered depth for the hub hero
+   ========================================================================== */
+
+.parallax-stage{
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.parallax-layer{
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+/* depth glows used behind the hub hero */
+.glow{
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .35;
+  pointer-events: none;
+}
+.glow-amber{ background: var(--amber); }
+.glow-teal{ background: var(--teal); }
+
+/* scroll-reveal (paired with IntersectionObserver in main.js) */
+.reveal{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.is-visible{ opacity: 1; transform: translateY(0); }
+
+/* hover tilt used on hub cards (JS sets --rx/--ry) */
+.tilt{
+  transform: perspective(800px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .25s ease;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity: 1; transform: none; }
+  .tilt{ transform: none !important; }
+}

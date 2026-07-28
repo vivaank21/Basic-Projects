@@ -1,0 +1,24 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 720px; }
+.summary-card{ display:grid; grid-template-columns: repeat(3,1fr); padding:22px; gap:10px; margin-bottom:14px; text-align:center; }
+.summary-label{ display:block; font-size:.76rem; color:var(--muted-2); text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px; }
+.summary-value{ font-family: var(--font-mono); font-size:1.4rem; font-weight:700; }
+.summary-value.income{ color: var(--teal); }
+.summary-value.expense{ color: var(--danger); }
+.balance-bar{ height:10px; padding:0; margin-bottom:24px; overflow:hidden; }
+#balance-fill{ height:100%; width:50%; background: linear-gradient(90deg, var(--teal), var(--amber)); transition: width .3s ease; }
+.entry-form{ display:grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap:10px; padding:18px; margin-bottom:20px; }
+@media (max-width:760px){ .entry-form{ grid-template-columns: 1fr 1fr; } .entry-form button{ grid-column:1/-1; } }
+.controls-row{ margin-bottom:18px; }
+.chip-row{ display:flex; gap:8px; flex-wrap:wrap; }
+.chip{ padding:.4em .9em; border-radius:999px; border:1px solid var(--border-strong); background:transparent; color:var(--muted); font-size:.8rem; cursor:pointer; font-family:var(--font-body); }
+.chip.is-active, .chip:hover{ background:var(--panel-2); color:var(--text); }
+.txn-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.txn-item{ display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius: var(--r-sm); border:1px solid var(--border); background: var(--panel); }
+.txn-cat{ font-size:.7rem; padding:.25em .6em; border-radius:999px; background:var(--panel-2); color:var(--muted); }
+.txn-desc{ flex:1; }
+.txn-amount{ font-family: var(--font-mono); font-weight:600; }
+.txn-amount.income{ color: var(--teal); }
+.txn-amount.expense{ color: var(--danger); }
+.txn-del{ background:none; border:none; color:var(--muted-2); cursor:pointer; }
+.txn-del:hover{ color: var(--danger); }
+.txn-empty{ text-align:center; padding:40px 0; color:var(--muted-2); }

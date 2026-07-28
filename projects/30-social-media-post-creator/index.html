@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Post Creator — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #30 · Creative</span>
+      <h1>Social Media Post Creator</h1>
+      <p>Pick a format, write your caption headline, export a ready-to-post image.</p>
+    </header>
+
+    <div class="social-wrap">
+      <div class="glass social-preview">
+        <canvas id="post-canvas" width="400" height="400"></canvas>
+      </div>
+      <div class="glass social-controls">
+        <label>Format
+          <select id="format-select">
+            <option value="square">Square post (1:1)</option>
+            <option value="story">Story (9:16)</option>
+            <option value="landscape">Landscape (16:9)</option>
+          </select>
+        </label>
+        <label>Headline
+          <input type="text" id="post-headline" value="New drop this week ✨">
+        </label>
+        <label>Handle
+          <input type="text" id="post-handle" value="@thebench">
+        </label>
+        <label>Background image (optional)
+          <input type="file" id="post-image" accept="image/*">
+        </label>
+        <div class="color-row">
+          <label>Accent A <input type="color" id="post-color-a" value="#f0a868"></label>
+          <label>Accent B <input type="color" id="post-color-b" value="#5ec8bd"></label>
+        </div>
+        <button class="btn btn-primary" id="download-post">Download PNG</button>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

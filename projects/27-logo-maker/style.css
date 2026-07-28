@@ -1,0 +1,13 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 800px; }
+.logo-wrap{ display:grid; grid-template-columns: 1fr 1fr; gap:20px; }
+@media (max-width:720px){ .logo-wrap{ grid-template-columns: 1fr; } }
+.logo-preview{ padding:20px; display:flex; align-items:center; justify-content:center; }
+#logo-canvas{ width:100%; max-width:340px; height:auto; border-radius: var(--r-md); }
+.logo-controls{ padding:22px; }
+.logo-controls label{ display:block; margin-bottom:16px; font-size:.85rem; color:var(--muted); }
+.emblem-grid{ display:grid; grid-template-columns: repeat(6,1fr); gap:6px; margin-top:8px; }
+.emblem-grid button{ aspect-ratio:1; border-radius:8px; border:1px solid var(--border-strong); background:var(--panel-2); font-size:1.2rem; cursor:pointer; }
+.emblem-grid button.is-active{ border-color: var(--amber); background: var(--ink-2); }
+.color-row{ display:flex; gap:10px; margin-bottom:18px; }
+.color-row label{ flex:1; margin-bottom:0; }
+input[type=color]{ width:100%; height:36px; padding:2px; margin-top:6px; background:var(--ink-2); border:1px solid var(--border-strong); border-radius:8px; }

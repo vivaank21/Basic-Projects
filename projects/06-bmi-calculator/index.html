@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Gauge — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #06 · Utility</span>
+      <h1>BMI Gauge</h1>
+      <p>Drag the sliders. This is a general index, not a diagnosis — talk to a clinician for personal guidance.</p>
+    </header>
+
+    <div class="glass bmi-card">
+      <div class="gauge-wrap">
+        <svg viewBox="0 0 200 120" class="gauge">
+          <path d="M 20 110 A 80 80 0 0 1 180 110" fill="none" stroke="var(--border-strong)" stroke-width="14" stroke-linecap="round"/>
+          <path id="gauge-fill" d="M 20 110 A 80 80 0 0 1 180 110" fill="none" stroke="var(--teal)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251"/>
+        </svg>
+        <div class="gauge-value">
+          <span id="bmi-value">--</span>
+          <span id="bmi-label" class="gauge-label">Enter your details</span>
+        </div>
+      </div>
+
+      <div class="slider-group">
+        <label>Height <span id="height-out">170</span> cm
+          <input type="range" id="height" min="120" max="220" value="170">
+        </label>
+        <label>Weight <span id="weight-out">65</span> kg
+          <input type="range" id="weight" min="30" max="180" value="65">
+        </label>
+      </div>
+
+      <button class="btn btn-primary" id="log-entry">Log this reading</button>
+    </div>
+
+    <div class="glass history-card">
+      <strong>History</strong>
+      <ul id="bmi-history"></ul>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

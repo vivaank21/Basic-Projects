@@ -1,0 +1,22 @@
+.tool-shell{ padding: 90px 24px 80px; max-width: 460px; }
+.calc-wrap{ position: relative; }
+.calc-display{ padding: 18px 20px; margin-bottom: 14px; }
+.calc-mode-row{ display:flex; gap:8px; margin-bottom: 14px; align-items:center; }
+.calc-mode-row .btn{ margin-left:auto; padding:.4em .9em; font-size:.78rem; }
+.chip{ padding:.4em .9em; border-radius:999px; border:1px solid var(--border-strong); background:transparent; color:var(--muted); font-size:.8rem; cursor:pointer; font-family:var(--font-body); }
+.chip.is-active{ background:var(--panel-2); color:var(--text); }
+.calc-expr{ text-align:right; color: var(--muted-2); font-family: var(--font-mono); min-height: 1.2em; font-size:.95rem; }
+.calc-result{ text-align:right; font-family: var(--font-mono); font-size: 2.6rem; font-weight:600; overflow-x:auto; white-space:nowrap; }
+.calc-pad{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 10px; }
+.calc-btn{ padding: 18px 0; border-radius: var(--r-sm); border:1px solid var(--border); background: var(--panel); color: var(--text); font-size:1.15rem; cursor:pointer; font-family: var(--font-mono); transition: transform .1s ease, background .15s ease; }
+.calc-btn:hover{ background: var(--panel-2); }
+.calc-btn:active{ transform: scale(.95); }
+.calc-op{ color: var(--amber); }
+.calc-equals{ background: linear-gradient(135deg, var(--teal), var(--teal-dim)); color: var(--ink-2); border-color:transparent; }
+.calc-wide{ grid-column: span 2; }
+.history-drawer{ position:absolute; top:0; right:-260px; width:240px; padding:16px; max-height: 500px; overflow-y:auto; }
+.history-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:.85rem; }
+#history-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+#history-list li{ font-family:var(--font-mono); font-size:.82rem; color: var(--muted); padding-bottom:8px; border-bottom:1px solid var(--border); cursor:pointer; }
+#history-list li:hover{ color: var(--text); }
+@media (max-width: 760px){ .history-drawer{ position:static; width:auto; margin-top:14px; } }

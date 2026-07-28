@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit Bench — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #19 · Utility</span>
+      <h1>Unit Bench</h1>
+      <p>Convert length, weight, temperature, speed, and currency — instantly, both ways.</p>
+    </header>
+
+    <div class="chip-row" id="category-tabs">
+      <button class="chip is-active" data-cat="length">Length</button>
+      <button class="chip" data-cat="weight">Weight</button>
+      <button class="chip" data-cat="temperature">Temperature</button>
+      <button class="chip" data-cat="speed">Speed</button>
+      <button class="chip" data-cat="currency">Currency</button>
+    </div>
+
+    <div class="glass convert-card">
+      <div class="convert-row">
+        <input type="number" id="input-value" value="1">
+        <select id="unit-from"></select>
+        <button class="swap-btn" id="swap-units">⇄</button>
+        <input type="number" id="output-value" readonly>
+        <select id="unit-to"></select>
+      </div>
+      <p class="convert-note" id="convert-note"></p>
+    </div>
+
+    <div class="glass recent-card">
+      <strong>Recent conversions</strong>
+      <ul id="recent-list"></ul>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

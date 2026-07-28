@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Defender — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #23 · Game</span>
+      <h1>Space Defender</h1>
+      <p>Arrow keys or A/D to move, Space to fire. Clear each wave before they reach you.</p>
+    </header>
+
+    <div class="defender-hud">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>Wave: <strong id="wave-out">1</strong></span>
+      <span>Lives: <strong id="lives-out">3</strong></span>
+      <span>Best: <strong id="best">0</strong></span>
+    </div>
+
+    <div class="glass canvas-wrap">
+      <canvas id="defender-canvas" width="400" height="500"></canvas>
+      <div class="defender-overlay" id="defender-overlay">
+        <p id="overlay-text">Press Space or tap to launch</p>
+        <button class="btn btn-primary" id="overlay-btn">Launch</button>
+      </div>
+    </div>
+    <p class="defender-hint">Mobile: tap left/right to move, tap top to fire.</p>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

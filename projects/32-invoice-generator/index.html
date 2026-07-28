@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Generator — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass no-print" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center no-print">
+      <span class="eyebrow">Tool #32 · Business</span>
+      <h1>Invoice Generator</h1>
+      <p>Bill your clients properly — line items, tax, due dates, auto-numbered.</p>
+    </header>
+
+    <div class="doc-layout">
+      <section class="glass form-pane no-print">
+        <h4>From</h4>
+        <label>Your business <input type="text" id="from-name" value="Vishu Dev Studio"></label>
+        <label>Your email <input type="text" id="from-email" value="hello@vishudev.studio"></label>
+        <h4>Bill to</h4>
+        <label>Client name <input type="text" id="to-name" value="Client Co."></label>
+        <label>Client email <input type="text" id="to-email" value="billing@clientco.com"></label>
+        <div class="two-col">
+          <label>Invoice # <input type="text" id="invoice-no" readonly></label>
+          <label>Due date <input type="date" id="due-date"></label>
+        </div>
+
+        <h4>Line items</h4>
+        <div class="item-rows" id="item-rows"></div>
+        <button class="btn btn-ghost" id="add-item">+ Add line item</button>
+
+        <label>Tax rate (%) <input type="number" id="tax-rate" value="18" min="0"></label>
+        <label>Notes <textarea id="notes" rows="2">Thanks for your business!</textarea></label>
+
+        <button class="btn btn-primary" id="print-invoice">🖨️ Print / Save PDF</button>
+      </section>
+
+      <section class="glass invoice-paper" id="invoice-preview">
+        <div class="inv-top">
+          <div><h2>INVOICE</h2><p id="p-invoice-no"></p></div>
+          <div class="inv-dates"><p>Date: <span id="p-date"></span></p><p>Due: <span id="p-due"></span></p></div>
+        </div>
+        <div class="inv-parties">
+          <div><strong>From</strong><p id="p-from-name"></p><p id="p-from-email"></p></div>
+          <div><strong>Bill to</strong><p id="p-to-name"></p><p id="p-to-email"></p></div>
+        </div>
+        <table class="inv-table">
+          <thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead>
+          <tbody id="p-items"></tbody>
+        </table>
+        <div class="inv-totals">
+          <div><span>Subtotal</span><span id="p-subtotal">₹0</span></div>
+          <div><span>Tax</span><span id="p-tax">₹0</span></div>
+          <div class="grand"><span>Total due</span><span id="p-total">₹0</span></div>
+        </div>
+        <p class="inv-notes" id="p-notes"></p>
+      </section>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

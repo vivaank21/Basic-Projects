@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poster Designer — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #28 · Creative</span>
+      <h1>Poster Designer</h1>
+      <p>Drag the title and subtitle to place them, tune the background, export as PNG.</p>
+    </header>
+
+    <div class="poster-wrap">
+      <div class="glass poster-preview">
+        <canvas id="poster-canvas" width="380" height="540"></canvas>
+      </div>
+      <div class="glass poster-controls">
+        <label>Title
+          <input type="text" id="poster-title" value="LIVE MUSIC NIGHT">
+        </label>
+        <label>Subtitle
+          <input type="text" id="poster-subtitle" value="Saturday · 8 PM · The Bench Hall">
+        </label>
+        <label>Background style
+          <select id="bg-style">
+            <option value="solid">Solid</option>
+            <option value="gradient" selected>Gradient</option>
+          </select>
+        </label>
+        <div class="color-row">
+          <label>Color A <input type="color" id="color-a" value="#12151c"></label>
+          <label>Color B <input type="color" id="color-b" value="#3f9089"></label>
+          <label>Text <input type="color" id="text-color" value="#e8e6e1"></label>
+        </div>
+        <label>Title size <span id="size-out">44</span>px
+          <input type="range" id="title-size" min="24" max="72" value="44">
+        </label>
+        <label>Upload image (optional)
+          <input type="file" id="image-upload" accept="image/*">
+        </label>
+        <p class="drag-hint">Drag the title or subtitle directly on the poster to reposition.</p>
+        <button class="btn btn-primary" id="download-poster">Download PNG</button>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

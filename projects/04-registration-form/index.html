@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign-Up Flow — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #04 · Form</span>
+      <h1>Sign-Up Flow</h1>
+      <p>A three-step registration with live validation. Your draft is saved as you type.</p>
+    </header>
+
+    <div class="glass form-card">
+      <div class="step-track">
+        <span class="step-dot is-active" data-step="1">1. Account</span>
+        <span class="step-dot" data-step="2">2. Profile</span>
+        <span class="step-dot" data-step="3">3. Review</span>
+      </div>
+
+      <form id="signup-form" novalidate>
+        <div class="form-step" data-step="1">
+          <label>Email
+            <input type="email" id="f-email" required placeholder="you@example.com">
+            <span class="field-msg" id="msg-email"></span>
+          </label>
+          <label>Password
+            <input type="password" id="f-password" required placeholder="At least 8 characters">
+            <div class="strength-meter"><span id="strength-bar"></span></div>
+            <span class="field-msg" id="msg-password"></span>
+          </label>
+          <label>Confirm password
+            <input type="password" id="f-confirm" required>
+            <span class="field-msg" id="msg-confirm"></span>
+          </label>
+        </div>
+
+        <div class="form-step hidden" data-step="2">
+          <label>Full name
+            <input type="text" id="f-name" required placeholder="Your name">
+          </label>
+          <label>Role
+            <select id="f-role">
+              <option>Developer</option><option>Designer</option><option>Student</option><option>Other</option>
+            </select>
+          </label>
+          <label>Bio (optional)
+            <textarea id="f-bio" rows="3" placeholder="A line about you"></textarea>
+          </label>
+        </div>
+
+        <div class="form-step hidden" data-step="3">
+          <div class="review-preview glass" id="review-preview"></div>
+        </div>
+
+        <div class="form-nav">
+          <button type="button" class="btn btn-ghost" id="btn-back">Back</button>
+          <button type="button" class="btn btn-primary" id="btn-next">Continue</button>
+          <button type="submit" class="btn btn-teal hidden" id="btn-submit">Create account</button>
+        </div>
+      </form>
+      <p class="autosave-note" id="autosave-note"></p>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo Maker — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #27 · Creative</span>
+      <h1>Logo Maker</h1>
+      <p>Pick an emblem, set your name, tune the colors — export a clean square logo.</p>
+    </header>
+
+    <div class="logo-wrap">
+      <div class="glass logo-preview">
+        <canvas id="logo-canvas" width="400" height="400"></canvas>
+      </div>
+      <div class="glass logo-controls">
+        <label>Brand name
+          <input type="text" id="logo-text" value="Bench Co" maxlength="20">
+        </label>
+        <label>Tagline (optional)
+          <input type="text" id="logo-tagline" placeholder="est. 2026" maxlength="24">
+        </label>
+        <label>Emblem
+          <div class="emblem-grid" id="emblem-grid"></div>
+        </label>
+        <label>Layout
+          <select id="logo-layout">
+            <option value="stack">Icon above text</option>
+            <option value="side">Icon beside text</option>
+            <option value="icon-only">Icon only</option>
+          </select>
+        </label>
+        <label>Shape
+          <select id="logo-shape">
+            <option value="circle">Circle badge</option>
+            <option value="square">Rounded square</option>
+            <option value="none">No badge</option>
+          </select>
+        </label>
+        <div class="color-row">
+          <label>Background <input type="color" id="logo-bg" value="#12151c"></label>
+          <label>Badge <input type="color" id="logo-badge" value="#f0a868"></label>
+          <label>Text <input type="color" id="logo-fg" value="#e8e6e1"></label>
+        </div>
+        <button class="btn btn-primary" id="download-logo">Download PNG</button>
+      </div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

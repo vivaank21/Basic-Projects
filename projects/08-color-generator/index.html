@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palette Forge — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #08 · Utility</span>
+      <h1>Palette Forge</h1>
+      <p>Space bar to shuffle. Click a swatch to lock it, click the format to convert.</p>
+    </header>
+
+    <div class="palette-row" id="palette-row"></div>
+
+    <div class="controls-row">
+      <button class="btn btn-primary" id="shuffle">Generate palette (space)</button>
+      <button class="btn btn-teal" id="save-palette">Save palette</button>
+    </div>
+
+    <div class="glass saved-card">
+      <strong>Saved palettes</strong>
+      <div id="saved-list"></div>
+    </div>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

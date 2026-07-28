@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ledger — The Bench</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pegboard">
+  <a class="bench-nav glass" href="../../index.html">&larr; The Bench</a>
+  <main class="container tool-shell">
+    <header class="tool-head center">
+      <span class="eyebrow">Tool #12 · Finance</span>
+      <h1>Ledger</h1>
+      <p>Track income and expenses by category, and see the monthly split at a glance.</p>
+    </header>
+
+    <div class="glass summary-card">
+      <div class="summary-item"><span class="summary-label">Income</span><span class="summary-value income" id="sum-income">₹0</span></div>
+      <div class="summary-item"><span class="summary-label">Expenses</span><span class="summary-value expense" id="sum-expense">₹0</span></div>
+      <div class="summary-item"><span class="summary-label">Balance</span><span class="summary-value" id="sum-balance">₹0</span></div>
+    </div>
+
+    <div class="balance-bar glass"><div id="balance-fill"></div></div>
+
+    <div class="glass entry-form">
+      <input type="text" id="e-desc" placeholder="Description">
+      <input type="number" id="e-amount" placeholder="Amount">
+      <select id="e-type"><option value="expense">Expense</option><option value="income">Income</option></select>
+      <select id="e-category">
+        <option>Food</option><option>Transport</option><option>Bills</option><option>Shopping</option><option>Salary</option><option>Other</option>
+      </select>
+      <button class="btn btn-primary" id="e-add">Add entry</button>
+    </div>
+
+    <div class="controls-row">
+      <div class="chip-row" id="cat-filters">
+        <button class="chip is-active" data-cat="All">All</button>
+        <button class="chip" data-cat="Food">Food</button>
+        <button class="chip" data-cat="Transport">Transport</button>
+        <button class="chip" data-cat="Bills">Bills</button>
+        <button class="chip" data-cat="Shopping">Shopping</button>
+        <button class="chip" data-cat="Salary">Salary</button>
+        <button class="chip" data-cat="Other">Other</button>
+      </div>
+    </div>
+
+    <ul class="txn-list" id="txn-list"></ul>
+    <p class="txn-empty hidden" id="txn-empty">No transactions yet. Add your first entry above.</p>
+  </main>
+  <script src="../../assets/js/storage.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
